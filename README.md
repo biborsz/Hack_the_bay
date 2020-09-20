@@ -63,7 +63,7 @@ __Random Forest Classifier__<br>
 
 __Evaluation of the Model__<br>
 
-The model predicts whether or not the measured amount of total phosphorus is dangerously high, stimulates plant growth, or is at ta healthy level with a cross-validated __accuracy__ of __97%__. This supports the 97% testing accuracy, supporting the notion that the model generalizes well to yet unseen data. (Training accuracy score: 100%.) 
+The model predicts whether or not the measured amount of total phosphorus is dangerously high, stimulates plant growth, or is at a healthy level, with a cross-validated __accuracy__ of __97%__. The testing acccuracy is 97% as well, supporting the notion that the model generalizes well to yet unseen data. (Training accuracy score: 100%.) 
 
 ## Future Directions
 - Incorporate data sets with more features (such as benthic data and weather data).
