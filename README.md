@@ -1,4 +1,4 @@
-# Modeling Toxic Phosphorus Levels on the Potomac River
+# Modeling Toxic Phosphorus Levels in the Chesapeake Watershed
 [Hack_the_Bay](https://hack-the-bay.devpost.com/?ref_content=default&ref_feature=challenge&ref_medium=portfolio)
 #### Cheaspeake Bay Water Quality Hackthon 
 **organizded by Booz Allen Hamilton**
@@ -21,12 +21,11 @@ The first step towards controlling the total phosphorus amount in the water body
 
 ## Data
 The original dataset contained water quality data collected in the entire Chesapeake Bay and Watershed by both the [CBP](https://www.chesapeakebay.net/) and the [CMC](https://www.chesapeakemonitoringcoop.org/). <br>
-Our model runs on the **Potomac River** subset of the original dataset.<br>
-Selection criteria: HUCNAME_ containing 'Potomac'.
 
 
 [Original Dataset](https://drive.google.com/file/d/12uoFlcn8pgeuxD2-seFak36KTvrFPKCt/view?usp=sharing)<br>
-[Clean Dataset](./data/WQ_FINAL_with_Parameters.csv)
+[Clean Dataset - Potomac River](./data/WQ_FINAL_with_Parameters.csv)<br>
+[Clean Dataset - Cheasapeake Watershed]()
 
 ## Missing Values
 - First, columns with more than 10% of NaN values were either dropped or NaN-s were imputed
@@ -52,33 +51,28 @@ __Transformed Variables:__
 > - Date_Time -> Year and Months
 
 __Dummified Variables:__
-> - HUC12
 > - Tide Stage
-> - Sample ID
 
 
 ## Model Description
 
 __Random Forest Classifier__<br>
 > Hyperparameters:
-> - n_estimators: 200
-> - min_samples_split: 10
-> - max_depth: None
+> - n_estimators: 750
+> - min_samples_split: 5
 
 __Evaluation of the Model__<br>
 
-The model predicts whether or not the measured amount of total phosphorus is dangerously high, stimulates plant growth, or is at ta healthy level with a cross-validated __accuracy__ of __96%__. This supports the 96% testing accuracy, supporting the notion that the model generalizes well to yet unseen data. (Training accuracy score: 99%.) 
+The model predicts whether or not the measured amount of total phosphorus is dangerously high, stimulates plant growth, or is at a healthy level, with a cross-validated __accuracy__ of __97%__. The testing acccuracy is 97% as well, supporting the notion that the model generalizes well to yet unseen data. (Training accuracy score: 100%.) 
 
 ## Future Directions
-
-- Extend the model to other areas of the Chesapeake Bay Watershed
-- Build a timeseries model capable of forecasting increasing phosphorus levels allerting to the potential of harmful algea blooms
-
-## Table of Contents
+- Incorporate data sets with more features (such as benthic data and weather data).
+- Try a neural net classifier.
 
 [Data cleaning](./01_WQ_Cleaning.ipynb)<br>
 [Data transformation](./02_WQ_Transformation.ipynb)<br>
-[Random Forest](./03_Model.ipynb)<br>
+[Random Forest - Potomac River](./03_Model.ipynb)<br>
+[Random Forest - entire Chesapeake Watershed](./03_Random_forest_Model.ipynb)<br>
 [Presentation](https://docs.google.com/presentation/d/1VRkR6QItJFE4X_mQ_-9SEt9KG4hi2e0wdtYizV-QUO8/edit#slide=id.g98a1113318_0_268)<br>
 [Presentation_Video](https://vimeo.com/458003934)
 
