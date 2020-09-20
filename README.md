@@ -1,4 +1,4 @@
-# Modeling Toxic Phosphorus Levels on the Potomac River
+# Modeling Toxic Phosphorus Levels in the Chesapeake Watershed
 [Hack_the_Bay](https://hack-the-bay.devpost.com/?ref_content=default&ref_feature=challenge&ref_medium=portfolio)
 #### Cheaspeake Bay Water Quality Hackthon 
 **organizded by Booz Allen Hamilton**
@@ -21,12 +21,11 @@ The first step towards controlling the total phosphorus amount in the water body
 
 ## Data
 The original dataset contained water quality data collected in the entire Chesapeake Bay and Watershed by both the [CBP](https://www.chesapeakebay.net/) and the [CMC](https://www.chesapeakemonitoringcoop.org/). <br>
-Our model runs on the **Potomac River** subset of the original dataset.<br>
-Selection criteria: HUCNAME_ containing 'Potomac'.
+Our model runs in the **Chesapeake Watershed** subset of the original dataset.<br>
 
 
 [Original Dataset](https://drive.google.com/file/d/12uoFlcn8pgeuxD2-seFak36KTvrFPKCt/view?usp=sharing)<br>
-[Clean Dataset](./data/WQ_FINAL_with_Parameters.csv)
+[Clean Dataset - Potomac River](./data/WQ_FINAL_with_Parameters.csv)
 
 ## Missing Values
 - First, columns with more than 10% of NaN values were either dropped or NaN-s were imputed
